@@ -74,6 +74,7 @@ public class Gun : ControllerInput
         currentRecoil += recoil;
         recoiling = true;
         gun.Play();
+        originPos = GameObject.Find("Rhand").transform; //get the original position of the hand
         yield return new WaitForSeconds(0.2f);
         canShoot = true;
        

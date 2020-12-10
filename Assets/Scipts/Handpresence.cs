@@ -13,7 +13,7 @@ public class Handpresence : ControllerInput
     {
         
         //assign the animators to the correct variable
-        if (handAnimatorR == null)
+      /*  if (handAnimatorR == null)
         {
             handAnimatorR = GameObject.FindGameObjectWithTag("RightHand").GetComponent<Animator>();
       
