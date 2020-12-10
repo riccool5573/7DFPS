@@ -7,34 +7,35 @@ public class Sword : MonoBehaviour
 
     private Vector3 oldPos;
     private Vector3 newPos;
-    private int check;
+
     private float xDiff;
     private float yDiff;
     private float zDiff;
     [SerializeField]
     private float threshHold;
-    private void Start()
-    {
-        check = 0;
-    }
+
     void Update()
     {
-        if(check == 0)
+
+
+
+        if(newPos != null)
         {
-            oldPos = this.gameObject.transform.position;
-            check = 1;
+            oldPos = newPos;
         }
-       else if(check == 1)
-        {
-            newPos = this.gameObject.transform.position;
-            check = 0;
-        }
+
+        newPos = this.gameObject.transform.position;
+
+
+
+
+
     }
 
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("hit");
+        
         if (collision.gameObject.tag == "Enemy")
         {
             xDiff = oldPos.x - newPos.x;

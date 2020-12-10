@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63101cb749bfaec439860965aa61a371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshHold: 0.2
+  threshHold: 0.15
 --- !u!54 &301115894956424774
 Rigidbody:
   m_ObjectHideFlags: 0

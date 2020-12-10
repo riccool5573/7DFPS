@@ -11,13 +11,18 @@ public class Gun : ControllerInput
     private RaycastHit hit;
     private bool canShoot = true;
     public GameObject bulletHole;
-    private Rigidbody body;
+    private float recoil = 0.1f;
+    private float currentRecoil;
     [SerializeField]
     private AudioSource gun;
+    [SerializeField]
+    private Transform originPos;
+    private bool recoiling;
+    private int counter;
     // Start is called before the first frame update
     void Start()
     {
-
+        originPos = GameObject.Find("Rhand").transform;
     }
 
     // Update is called once per frame
@@ -25,7 +30,7 @@ public class Gun : ControllerInput
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(RHand);
         device.TryGetFeatureValue(CommonUsages.trigger, out float triggerValueR);
-  
+
         if (triggerValueR >= 0.9f && canShoot)
         {
 
@@ -33,6 +38,30 @@ public class Gun : ControllerInput
             StartCoroutine(shoot());
 
         }
+        Debug.Log(transform.position.y - originPos.position.y);
+        if (recoiling && counter < 6)
+        {
+
+            transform.position = transform.position + new Vector3(0, currentRecoil * Time.fixedDeltaTime, 0);
+            Quaternion target = Quaternion.Euler(0, 0, 15);
+            this.transform.Rotate(-8f, 0, 0);
+            counter++;
+        }
+        else
+        {
+            counter = 0;
+            recoiling = false;
+            currentRecoil = 0;
+        }
+        if(transform.position.y > originPos.position.y && !recoiling)
+        {
+            transform.position = transform.position - new Vector3(0, 0.5f * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, originPos.rotation, 8);
+        }
+
+
+
+
     }
 
     private IEnumerator shoot()
@@ -40,11 +69,11 @@ public class Gun : ControllerInput
         Debug.Log("Shoot");
         Instantiate(bulletHole, hit.point, Quaternion.identity);
         canShoot = false;
-        gun.Play(1);
+        currentRecoil += recoil;
+        recoiling = true;
+        gun.Play();
         yield return new WaitForSeconds(0.2f);
         canShoot = true;
-        body = this.gameObject.GetComponent<Rigidbody>();
-        body.AddForce(Vector3.up * 5);
-
+       
     }
 }
