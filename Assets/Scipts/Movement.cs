@@ -30,10 +30,11 @@ public class Movement : ControllerInput
     // Update is called once per frame
     void Update()
     {
+        // get the input from the right joystick
         InputDevice device = InputDevices.GetDeviceAtXRNode(lHand);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
         device.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out bool click);
-
+        //if the joystick is clicked start sprinting.
         if (click)
         {
             speed = 2;
@@ -47,8 +48,9 @@ public class Movement : ControllerInput
     {
         Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
         Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
-
+        // move the player in the direction you're looking with the joystick
         character.Move(direction * Time.fixedDeltaTime * speed);
+        // if the player is not grounded start accelerating towards the ground
         bool isGrounded = GroundCheck();
         if (isGrounded)
             fallingSpeed = 0;
@@ -61,6 +63,7 @@ public class Movement : ControllerInput
 
     bool GroundCheck()
     {
+        //check if player is on the ground.
         Vector3 rayStart = transform.TransformPoint(character.center);
         float rayLength = character.center.y + 0.01f;
         bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit info, rayLength, groundLayer);

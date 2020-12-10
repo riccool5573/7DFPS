@@ -12,6 +12,7 @@ public class ControllerInput : MonoBehaviour
     private Vector2 joyL;
     protected void InitializeControllers()
     {
+        
         devices = new List<InputDevice>(); // get a list of VR devices
         InputDevices.GetDevices(devices);
         if (devices.Count > 0)
@@ -29,6 +30,7 @@ public class ControllerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // make sure both hands are valid, and if they aren't, try to reinitialize them
         if (!leftHand.isValid)
         {
             InitializeControllers();
@@ -43,6 +45,7 @@ public class ControllerInput : MonoBehaviour
     }
     protected Vector2 GetJoystick()
     {
+        // get the output of the left joystick, for debug purposes
         leftHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out joyL);
         Debug.Log(joyL);
         return joyL;

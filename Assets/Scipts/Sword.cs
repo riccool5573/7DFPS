@@ -18,7 +18,7 @@ public class Sword : MonoBehaviour
     {
 
 
-
+        // keep track of where it was last frame, and where it is now.
         if(newPos != null)
         {
             oldPos = newPos;
@@ -38,6 +38,7 @@ public class Sword : MonoBehaviour
         
         if (collision.gameObject.tag == "Enemy")
         {
+            // take the difference between where it was last frame and where it is now, if its above the threshhold then do damage to enemy
             xDiff = oldPos.x - newPos.x;
             yDiff = oldPos.y - newPos.y;
             zDiff = oldPos.z - newPos.z;
