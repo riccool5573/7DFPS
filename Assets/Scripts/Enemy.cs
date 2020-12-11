@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     protected bool active = false;
     protected FieldOfView f;
     EnemyMovement em;
+    int hp = 3;
      protected enum state
     {
         NEUTRAL,
@@ -109,18 +110,24 @@ public class Enemy : MonoBehaviour
         ChangeState(state.NEUTRAL);
         active = false;
         transform.GetChild(0).GetComponent<FieldOfView>().active = true;
+        hp = 3;
         
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBullet"))
         {
-            Die();
+            hp--;
+            if (hp == 0)
+            {
+                Die();
+            }
         }
     }
     virtual public void Die()
     {
         transform.localEulerAngles = startRot;
+
         gameObject.SetActive(false);
     }
 }
