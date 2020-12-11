@@ -13,8 +13,10 @@ public class Movement : ControllerInput
     [SerializeField]
     private XRNode lHand;
     [SerializeField]
+    private XRNode rHand;
+    [SerializeField]
     private LayerMask groundLayer;
-    private int speed = 4;
+    private int speed = 6;
     [SerializeField]
     private Transform Head;
 
@@ -23,6 +25,7 @@ public class Movement : ControllerInput
     void Start()
     {
         character = GetComponent<CharacterController>();
+
     }
 
 
@@ -31,25 +34,30 @@ public class Movement : ControllerInput
     void Update()
     {
         // get the input from the right joystick
-        InputDevice device = InputDevices.GetDeviceAtXRNode(lHand);
-        device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
-        device.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out bool click);
-        //if the joystick is clicked start sprinting.
-        if (click)
-        {
-            speed = 6;
-        }
-        else
-        {
-            speed = 4;
-        }
+       
     }
     private void FixedUpdate()
     {
-       Quaternion headYaw = Quaternion.Euler(0, Head.transform.eulerAngles.y, 0);
-        Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
+        InputDevice deviceL = InputDevices.GetDeviceAtXRNode(lHand);
+        InputDevice deviceR = InputDevices.GetDeviceAtXRNode(rHand);
+        deviceL.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 inputAxisL);      
+        deviceL.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out bool click);
+        deviceR.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 inputAxisR);
+
+        //if the joystick is clicked start sprinting.
+        if (click)
+        {
+            speed = 12;
+        }
+        else
+        {
+            speed = 6;
+        }
+        Quaternion headYaw = Quaternion.Euler(0, Head.transform.eulerAngles.y, 0);
+        Vector3 direction = headYaw * new Vector3(inputAxisL.x, 0, inputAxisL.y);
         //move the player in the direction you're looking with the joystick
         character.Move(direction * Time.fixedDeltaTime * speed);
+        transform.Rotate(0, inputAxisR.x, 0);
         // if the player is not grounded start accelerating towards the ground
         bool isGrounded = GroundCheck();
         if (isGrounded)

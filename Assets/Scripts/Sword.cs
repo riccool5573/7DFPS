@@ -57,7 +57,8 @@ public class Sword : MonoBehaviour
             {
                 Rigidbody enemy = collision.gameObject.GetComponent<Rigidbody>();
                 enemy.freezeRotation = false;
-               
+                Enemy Enemy = enemy.GetComponent<Enemy>();
+                Enemy.Die();
             }
         }
     }

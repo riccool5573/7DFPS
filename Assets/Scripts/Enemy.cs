@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
     }
     virtual protected void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, effectiveRange);
+      //  Gizmos.DrawWireSphere(transform.position, effectiveRange);
     }
     virtual protected void Attack()
     {
