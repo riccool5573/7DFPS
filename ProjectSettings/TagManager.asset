@@ -7,6 +7,8 @@ TagManager:
   - RightHand
   - LeftHand
   - Enemy
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
