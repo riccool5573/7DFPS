@@ -25,26 +25,23 @@ public class FieldOfView : MonoBehaviour
     {
         obstructed = false;
         vision = false;
-         RaycastHit r;
-        if (Physics.Raycast(transform.position, p.transform.position -transform.position, out r, visionRange,Obstacles))
+        RaycastHit r;
+        if (Physics.Raycast(transform.position, p.transform.position - transform.position, out r, visionRange, Obstacles))
         {
-            
+
             if (r.collider.gameObject != p.gameObject)
             {
                 obstructed = true;
             }
         }
-        Vector3 targetDir = new Vector3(p.transform.position.x,0,p.transform.position.z) - transform.position;
-        
-        float angle = Vector3.Angle(targetDir, transform.forward);
-       
-        
 
-        if (angle < fov / 2&& Vector3.Distance(transform.position,p.transform.position)<visionRange&&obstructed==false)
+
+
+        if (Vector3.Distance(transform.position, p.transform.position) < visionRange && obstructed == false)
         {
             vision = true;
         }
-        if (vision&&active)
+        if (vision && active)
         {
             SpotPlayer();
         }
@@ -55,29 +52,9 @@ public class FieldOfView : MonoBehaviour
         OnSpot?.Invoke();
         active = false;
     }
-   /* private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
-        
-            p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        
-        if (vision)
-        {
-            Gizmos.color = Color.red;
-        }
-        else
-        {
-            Gizmos.color = Color.white;
-        }
-        Gizmos.DrawRay(transform.position, Quaternion.AngleAxis(fov/2, Vector3.up)*transform.forward*visionRange );
-        Gizmos.DrawRay(transform.position, Quaternion.AngleAxis(-fov / 2, Vector3.up) * transform.forward * visionRange);
-        if (obstructed)
-        {
-            Gizmos.color = Color.white;
-        }
-        else
-        {
-            Gizmos.color = Color.red;
-        }
-        Gizmos.DrawLine(transform.position, p.transform.position);
-    }*/
+
+        Gizmos.DrawWireSphere(transform.position, visionRange);
+    }
 }
