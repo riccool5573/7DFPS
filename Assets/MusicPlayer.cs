@@ -18,7 +18,6 @@ public class MusicPlayer : MonoBehaviour
         aS.clip = song;
         aS.Play();
         aS.loop = false;
-        aS.time = aS.clip.length - 5;
     }
 
     // Update is called once per frame
