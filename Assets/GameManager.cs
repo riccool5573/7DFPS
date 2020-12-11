@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager GM;
     Enemy[] Enemies;
     GameObject Player;
-    
+    Vector3 playerStart;
+    Vector3 playerRot;
     private void Awake()
     {
         if (GM == null)
@@ -16,15 +17,20 @@ public class GameManager : MonoBehaviour
         }
         else Destroy(gameObject);
         DontDestroyOnLoad(this);
-
+        Player = GameObject.FindGameObjectWithTag("Player");
         Enemies = GameObject.FindObjectsOfType<Enemy>();
+        playerRot = Player.transform.localEulerAngles;
+        playerStart = Player.transform.position;
     }
-    private void Start()
+    public void Restart()
     {
         foreach(Enemy e in Enemies)
         {
             e.gameObject.SetActive(true);
-           e.Invoke("Respawn",5);
+            e.Respawn();
         }
+        Player.transform.position = playerStart;
+        Player.transform.localEulerAngles = playerRot;
     }
+    
 }

@@ -32,7 +32,14 @@ public class Sword : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyBullet"))
+        {
 
+            Destroy(other.gameObject);
+        }
+    }
     private void OnCollisionStay(Collision collision)
     {
         
