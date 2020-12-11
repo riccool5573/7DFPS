@@ -195,10 +195,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RHand: 5
+  canShoot: 1
   bulletPrefab: {fileID: 2919980112337486442, guid: 395b626094dd8634d8405eab7ec0d71d,
     type: 3}
   gun: {fileID: 3445140686035018353}
   barrel: {fileID: 3402117149007321574}
+--- !u!64 &4066793110842705881
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696417400200060810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2109018371731965518, guid: ec692c0bb13b0fb4089660533ce53c30, type: 3}
 --- !u!1 &8230030199233844803
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230030199233844803}
   m_LocalRotation: {x: -0.23810968, y: -0, z: -0, w: 0.97123826}
-  m_LocalPosition: {x: -0.014766693, y: 0.006123464, z: 0.00443762}
+  m_LocalPosition: {x: -0.0214, y: 0.008, z: 0.041}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children: []
   m_Father: {fileID: 7689102506025921945}

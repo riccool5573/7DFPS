@@ -13,4 +13,8 @@ public class ConstantVelocity : MonoBehaviour
     {
         velocity = v;
     }
+    public Vector3 GetVelocity()
+    {
+        return velocity;
+    }
 }
