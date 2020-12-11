@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bullet
-  m_Shader: {fileID: -6465566751694194690, guid: f2c001aa3e2f78d44a0cffb184802701,
+  m_Shader: {fileID: -6465566751694194690, guid: 51e72c09b7a3033498524b6928fad194,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 2

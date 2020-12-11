@@ -9,22 +9,16 @@ public class Gun : ControllerInput
     private XRNode RHand;
     private Vector3 shotPosition;
     private RaycastHit hit;
+    [SerializeField]
     private bool canShoot = true;
     public GameObject bulletPrefab;
-    private float recoil = 0.1f;
-    private float currentRecoil;
     [SerializeField]
     private AudioSource gun;
-    [SerializeField]
-    private Transform originPos;
-    private bool recoiling;
-    private int counter;
+
     [SerializeField] Transform barrel;
     // Start is called before the first frame update
     void Start()
     {
-        originPos = GameObject.Find("Rhand").transform; //get the original position of the hand
-        StartCoroutine(shoot());
     }
 
     // Update is called once per frame
@@ -32,37 +26,12 @@ public class Gun : ControllerInput
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(RHand);
         device.TryGetFeatureValue(CommonUsages.trigger, out float triggerValueR);
+        Debug.Log(canShoot);
         // when trigger is pressed start shoot()
         if (triggerValueR >= 0.9f && canShoot)
         {
-
-
             StartCoroutine(shoot());
-
-
         }
-        Debug.Log(transform.position.y - originPos.position.y);
-        if (recoiling && counter < 6)
-        {
-            // add the recoil gradually to the position and rotation of the hand
-            transform.position = transform.position + new Vector3(0, currentRecoil * Time.fixedDeltaTime, 0);
-            Quaternion target = Quaternion.Euler(0, 0, 15);
-            this.transform.Rotate(-8f, 0, 0);
-            counter++;
-        }
-        else
-        {
-            counter = 0;
-            recoiling = false;
-            currentRecoil = 0;
-        }
-        if (transform.position.y > originPos.position.y && !recoiling)
-        {
-            //return the hand gradually to the original position
-            transform.position = transform.position - new Vector3(0, 0.5f * Time.fixedDeltaTime);
-            transform.rotation = Quaternion.Slerp(transform.rotation, originPos.rotation, 8);
-        }
-
 
 
 
@@ -75,10 +44,7 @@ public class Gun : ControllerInput
         GameObject bullet = Instantiate(bulletPrefab, barrel.position, Quaternion.identity);
         bullet.GetComponent<ConstantVelocity>().SetVelocity(transform.forward * Random.Range(100, 200) / 1000);
         canShoot = false;
-        currentRecoil += recoil;
-        recoiling = true;
         gun.Play();
-        originPos = GameObject.Find("Rhand").transform; //get the original position of the hand
         yield return new WaitForSeconds(0.2f);
         canShoot = true;
 

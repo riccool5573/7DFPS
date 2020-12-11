@@ -28,7 +28,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7689102506025921945}
-  - {fileID: 3402117149007321574}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,9 +195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RHand: 5
-  bulletHole: {fileID: 6424029191414428886, guid: 2b6a6d0181917274d86f7f69d25002a3,
+  bulletPrefab: {fileID: 2919980112337486442, guid: 395b626094dd8634d8405eab7ec0d71d,
     type: 3}
   gun: {fileID: 3445140686035018353}
+  barrel: {fileID: 3402117149007321574}
 --- !u!1 &8230030199233844803
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3402117149007321574}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,11 +222,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230030199233844803}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0363, y: 0.047, z: 0.0163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.23810968, y: -0, z: -0, w: 0.97123826}
+  m_LocalPosition: {x: -0.014766693, y: 0.006123464, z: 0.00443762}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_Children: []
-  m_Father: {fileID: 3445140685595066197}
+  m_Father: {fileID: 7689102506025921945}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3445140684697503363
