@@ -108,6 +108,13 @@ public class Enemy : MonoBehaviour
         transform.GetChild(0).GetComponent<FieldOfView>().active = true;
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            Die();
+        }
+    }
     public void Die()
     {
         gameObject.SetActive(false);
