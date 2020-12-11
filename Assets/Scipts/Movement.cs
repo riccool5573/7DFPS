@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
+
 public class Movement : ControllerInput
 {
 
@@ -12,17 +12,17 @@ public class Movement : ControllerInput
     private float fallingSpeed;
     [SerializeField]
     private XRNode lHand;
-    private XRRig rig;
     [SerializeField]
     private LayerMask groundLayer;
-    private int speed = 1;
+    private int speed = 4;
+    [SerializeField]
+    private Transform Head;
 
 
     // Start is called before the first frame update
     void Start()
     {
         character = GetComponent<CharacterController>();
-        rig = GetComponent<XRRig>();
     }
 
 
@@ -37,18 +37,18 @@ public class Movement : ControllerInput
         //if the joystick is clicked start sprinting.
         if (click)
         {
-            speed = 2;
+            speed = 6;
         }
         else
         {
-            speed = 1;
+            speed = 4;
         }
     }
     private void FixedUpdate()
     {
-        Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
+       Quaternion headYaw = Quaternion.Euler(0, Head.transform.eulerAngles.y, 0);
         Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
-        // move the player in the direction you're looking with the joystick
+        //move the player in the direction you're looking with the joystick
         character.Move(direction * Time.fixedDeltaTime * speed);
         // if the player is not grounded start accelerating towards the ground
         bool isGrounded = GroundCheck();

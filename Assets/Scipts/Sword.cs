@@ -42,11 +42,15 @@ public class Sword : MonoBehaviour
             xDiff = oldPos.x - newPos.x;
             yDiff = oldPos.y - newPos.y;
             zDiff = oldPos.z - newPos.z;
-            
+            Debug.Log(yDiff);
+            Debug.Log(xDiff);
+            Debug.Log(zDiff);
+
             if (xDiff >= threshHold || yDiff >= threshHold || zDiff >= threshHold)
             {
                 Rigidbody enemy = collision.gameObject.GetComponent<Rigidbody>();
                 enemy.freezeRotation = false;
+               
             }
         }
     }
