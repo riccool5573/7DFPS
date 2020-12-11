@@ -6,6 +6,12 @@ public class EnemyGun : Enemy
 {
     [SerializeField] EnemyWeapon myGun;
     [SerializeField] GameObject arm;
+    Vector3 armRot;
+    protected override void Start()
+    {
+        base.Start();
+        armRot = arm.transform.localEulerAngles;
+    }
     // Start is called before the first frame update
     public override void StartCombat(FieldOfView f)
     {
@@ -35,6 +41,11 @@ public class EnemyGun : Enemy
         arm.transform.eulerAngles = new Vector3(0, arm.transform.eulerAngles.y+90, arm.transform.eulerAngles.z-85);
 
         myGun.Shoot();
+    }
+    public override void Die()
+    {
+        base.Die();
+        arm.transform.localEulerAngles = armRot;
     }
    
 

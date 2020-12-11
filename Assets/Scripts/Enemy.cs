@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float effectiveRange;
     [SerializeField] protected float attackStartupTime;
     [SerializeField] protected float attackEndLag;
-    Vector3 startPos;
+    protected Vector3 startPos;
+    protected Vector3 startRot;
     protected bool active = false;
     protected FieldOfView f;
     EnemyMovement em;
@@ -19,10 +20,12 @@ public class Enemy : MonoBehaviour
         STUNNED
     }
     [SerializeField] state currentState =0;
-    private void Start()
+    virtual protected void Start()
     {
         em = GetComponent<EnemyMovement>();
         startPos = transform.position;
+        print(startPos);
+        startRot = transform.localEulerAngles;
     }
     virtual public void StartCombat(FieldOfView _f)
     {
@@ -115,8 +118,9 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
-    public void Die()
+    virtual public void Die()
     {
+        transform.localEulerAngles = startRot;
         gameObject.SetActive(false);
     }
 }
