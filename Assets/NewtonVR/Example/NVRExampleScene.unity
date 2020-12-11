@@ -15883,6 +15883,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8795526815212752110, guid: 976bec4167995da41b5d3f3863f2ff61,
+        type: 3}
+      propertyPath: OverrideAllRightHandPhysicalColliders
+      value: 
+      objectReference: {fileID: 3445140685595066196, guid: b0c38fd76d426254f86cba873b2f7db8,
+        type: 3}
     - target: {fileID: 8795526815218220484, guid: 976bec4167995da41b5d3f3863f2ff61,
         type: 3}
       propertyPath: m_Name

@@ -55,7 +55,7 @@ public class FieldOfView : MonoBehaviour
         OnSpot?.Invoke();
         active = false;
     }
-    private void OnDrawGizmos()
+   /* private void OnDrawGizmos()
     {
         
             p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -79,5 +79,5 @@ public class FieldOfView : MonoBehaviour
             Gizmos.color = Color.red;
         }
         Gizmos.DrawLine(transform.position, p.transform.position);
-    }
+    }*/
 }

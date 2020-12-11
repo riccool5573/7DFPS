@@ -47,7 +47,7 @@ public class Movement : ControllerInput
         //if the joystick is clicked start sprinting.
         if (click)
         {
-            speed = 8;
+            speed = 12;
         }
         else
         {
