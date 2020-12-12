@@ -14,7 +14,7 @@ public class EnemyWeapon : MonoBehaviour
     }
     public void Shoot()
     {
-        GameObject b= Instantiate(bulletPrefab, barrel.position, Quaternion.identity);
+        GameObject b= Instantiate(bulletPrefab, barrel.position, transform.rotation);
         b.GetComponent<ConstantVelocity>().SetVelocity(transform.forward * bulletVelocity/100);
         Destroy(b, 5);
     }
