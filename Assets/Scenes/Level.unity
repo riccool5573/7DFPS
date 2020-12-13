@@ -2121,7 +2121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1852419070, guid: 6fbf114780fec5043946e9674749f1d5, type: 3}
       propertyPath: bulletVelocity
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2289059951219863465, guid: 6fbf114780fec5043946e9674749f1d5,
         type: 3}

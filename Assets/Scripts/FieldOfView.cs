@@ -27,7 +27,7 @@ public class FieldOfView : MonoBehaviour
         obstructed = false;
         vision = false;
         RaycastHit r;
-        if (Physics.Raycast(transform.position, p.transform.position - transform.position, out r, visionRange, Obstacles))
+        if (Physics.Raycast(transform.position, (p.transform.position+Vector3.up) - transform.position, out r, visionRange, Obstacles))
         {
 
             if (r.collider.gameObject != p.gameObject)
