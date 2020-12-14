@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grid sprite
-  m_Shader: {fileID: -6465566751694194690, guid: 51e72c09b7a3033498524b6928fad194,
+  m_Shader: {fileID: -6465566751694194690, guid: 53d7f987d0b39694db6ca86d1a1b3526,
     type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 2
