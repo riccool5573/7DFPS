@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 8299079227921400711}
   - component: {fileID: 8028586549030470331}
   - component: {fileID: 2380193480460580565}
-  - component: {fileID: 5980788567564438741}
+  - component: {fileID: 4453758454487409354}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: EnemyBullet
@@ -149,8 +149,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: b9cf8793cafd9a64cb65c67f939c3951, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -195,7 +195,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.451
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -235,7 +235,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5980788567564438741
+--- !u!114 &4453758454487409354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
