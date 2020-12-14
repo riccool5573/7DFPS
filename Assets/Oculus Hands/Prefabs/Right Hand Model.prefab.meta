@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1fd3a7c43c8190f4d8c167ebde694364
+=======
+<<<<<<< HEAD:Assets/Prefabs/Player.prefab.meta
+guid: 0a111b516ffd3b4499935ec6f599c571
+=======
+guid: 1fd3a7c43c8190f4d8c167ebde694364
+>>>>>>> parent of 99c14f3... cleanup & level 1:Assets/Oculus Hands/Prefabs/Right Hand Model.prefab.meta
+>>>>>>> parent of 99c14f3... cleanup & level 1
 PrefabImporter:
   externalObjects: {}
   userData: 
