@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConstantVelocity : MonoBehaviour
 {
      Vector3 velocity;
+    
     private void Update()
     {
         transform.position += velocity;
@@ -16,5 +17,12 @@ public class ConstantVelocity : MonoBehaviour
     public Vector3 GetVelocity()
     {
         return velocity;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 8)
+        {
+            Destroy(gameObject);
+        }
     }
 }
