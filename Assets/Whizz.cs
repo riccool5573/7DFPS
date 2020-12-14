@@ -15,7 +15,7 @@ public class Whizz : MonoBehaviour
     {
         if (!aS.isPlaying &&Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) < 1.5f)
         {
-            aS.PlayOneShot(clips[Mathf.FloorToInt(Random.Range(1, 10))]);
+            aS.PlayOneShot(clips[Mathf.FloorToInt(Random.Range(1, 5))]);
         }
     }
 }
