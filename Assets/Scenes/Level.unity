@@ -284,6 +284,7 @@ PrefabInstance:
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
@@ -369,6 +370,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8791528901760809538, guid: 976bec4167995da41b5d3f3863f2ff61,
     type: 3}
   m_PrefabInstance: {fileID: 1681884869}
+=======
+  m_Size: {x: 1.4994736, y: 2.341744, z: 1.5777521}
+  m_Center: {x: -0.045913696, y: -0.15593934, z: 0.28887606}
+--- !u!54 &285307650
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> parent of 6967e89... something
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &290389511
 GameObject:
@@ -2412,6 +2422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145644507107816487, guid: fe8e9faa635ea994ca035198a3f87424,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     - target: {fileID: -4216859302048453862, guid: 452666430183a2f4e9faad38b295c580,
         type: 3}
@@ -2456,6 +2467,8 @@ PrefabInstance:
 >>>>>>> parent of ccaf675... level 1 complete
 =======
 >>>>>>> parent of 6967e89... something
+=======
+>>>>>>> parent of 6967e89... something
         type: 3}
       propertyPath: m_Name
       value: building3
@@ -2473,6 +2486,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6918911205946230947, guid: 13fe3136a0d649242a6405379f2f7cbf,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     - target: {fileID: 412152406127226273, guid: 6eefa84de7916234fb84d804342d27d0,
         type: 3}
@@ -2489,6 +2503,8 @@ PrefabInstance:
 =======
     - target: {fileID: 2126988075691874685, guid: 6eefa84de7916234fb84d804342d27d0,
 >>>>>>> parent of ccaf675... level 1 complete
+=======
+>>>>>>> parent of 6967e89... something
 =======
 >>>>>>> parent of 6967e89... something
         type: 3}
