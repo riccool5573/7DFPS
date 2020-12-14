@@ -7,9 +7,12 @@ public class NextLevel : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("got here");
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-
+     
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (SceneManager.sceneCount > nextSceneIndex)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
+        
     }
 }
