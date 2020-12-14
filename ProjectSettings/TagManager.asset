@@ -12,6 +12,7 @@ TagManager:
   - LeftHand
   - RightHand
   - Sword
+  - Button
   layers:
   - Default
   - TransparentFX

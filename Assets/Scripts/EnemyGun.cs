@@ -39,7 +39,10 @@ public class EnemyGun : Enemy
 
         arm.transform.rotation = rot;
         arm.transform.eulerAngles = new Vector3(0, arm.transform.eulerAngles.y+90, arm.transform.eulerAngles.z-85);
-
+        if (Random.Range(0, 5)  >3)
+        {
+            arm.transform.eulerAngles = new Vector3(0, arm.transform.eulerAngles.y + 10, arm.transform.eulerAngles.z + 10);
+        }
         myGun.Shoot();
     }
     public override void Die()
