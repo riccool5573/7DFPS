@@ -965,6 +965,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2126988075691874685, guid: 6eefa84de7916234fb84d804342d27d0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3161471663704238958, guid: 6eefa84de7916234fb84d804342d27d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2288,6 +2293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 373126405833748667, guid: 941a15fef4497ac419b08c4c4b5509bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3708368659196871336, guid: 941a15fef4497ac419b08c4c4b5509bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2640,6 +2650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 373126405833748667, guid: 941a15fef4497ac419b08c4c4b5509bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3708368659196871336, guid: 941a15fef4497ac419b08c4c4b5509bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2763,6 +2778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847916652973147788, guid: 50bc21faf13c28a4c86ec71a3dc4154c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bc21faf13c28a4c86ec71a3dc4154c, type: 3}
@@ -3558,6 +3578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7847916652973147788, guid: 50bc21faf13c28a4c86ec71a3dc4154c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bc21faf13c28a4c86ec71a3dc4154c, type: 3}
 --- !u!1001 &2039230031
@@ -3715,6 +3740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7847916652973147788, guid: 50bc21faf13c28a4c86ec71a3dc4154c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bc21faf13c28a4c86ec71a3dc4154c, type: 3}
 --- !u!1001 &2082788312
@@ -3738,6 +3768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126988075691874685, guid: 6eefa84de7916234fb84d804342d27d0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3161471663704238958, guid: 6eefa84de7916234fb84d804342d27d0,
         type: 3}
@@ -3933,6 +3968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1
       objectReference: {fileID: 0}
+    - target: {fileID: 7847916652973147788, guid: 50bc21faf13c28a4c86ec71a3dc4154c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bc21faf13c28a4c86ec71a3dc4154c, type: 3}
 --- !u!1001 &5980447851548876985
@@ -3956,6 +3996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126988075691874685, guid: 6eefa84de7916234fb84d804342d27d0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3161471663704238958, guid: 6eefa84de7916234fb84d804342d27d0,
         type: 3}
@@ -4025,6 +4070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building2
+      objectReference: {fileID: 0}
+    - target: {fileID: 373126405833748667, guid: 941a15fef4497ac419b08c4c4b5509bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3708368659196871336, guid: 941a15fef4497ac419b08c4c4b5509bf,
         type: 3}
