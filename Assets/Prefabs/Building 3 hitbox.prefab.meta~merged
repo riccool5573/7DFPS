@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 6eefa84de7916234fb84d804342d27d0
+=======
 <<<<<<< HEAD:Assets/Oculus Hands/Prefabs/Left Hand Model.prefab.meta
 guid: 65847589f926b734d9eaed6e25f0046b
 =======
 guid: 6eefa84de7916234fb84d804342d27d0
 >>>>>>> parent of ccaf675... level 1 complete:Assets/Prefabs/Building 3 hitbox.prefab.meta
+>>>>>>> parent of ccaf675... level 1 complete
 PrefabImporter:
   externalObjects: {}
   userData: 
