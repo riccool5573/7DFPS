@@ -32,7 +32,7 @@ public class EnemyGun : Enemy
     protected override void PerformAttack()
     {
         base.PerformAttack();
-        Vector3 angle = f.p.transform.position - arm.transform.position;
+        Vector3 angle = (f.p.transform.position+Vector3.up) - arm.transform.position;
 
 
         Quaternion rot = Quaternion.LookRotation(angle);

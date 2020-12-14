@@ -18,7 +18,7 @@ public class ConstantVelocity : MonoBehaviour
     {
         return velocity;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.layer == 8)
         {
